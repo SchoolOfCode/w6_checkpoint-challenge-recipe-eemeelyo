@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Recipe Generator</h1>
-      <p>About:</p>
-    </header>
-    <p>
-      A simple project that will load a veriety of recipe depending on your
-      chosen food.
-    </p>
     <section id="recipe-section">
       <h2 class="section-heading">Welcome to the Recipe Finder!</h2>
+      <p>
+        A simple project with School Of Code <br />
+        that will help you find a variety of recipe <br />depending on your
+        taste buds.<br /><br />
+        Just type any food or ingredients in the search box <br />and it will do
+        the rest.
+      </p>
       <input
         aria-label="food-input"
         id="food-input"
+        placeholder="................Any Food!............."
         onchange="handleFoodChange()"
       />
+      <br />
       <button id="recipe-button" onclick="handleRecipeClick()">
         Give me a recipe!
       </button>
