@@ -16,6 +16,7 @@ async function fetchRecipe(food) {
   );
   const dataResponse = await requestUrl.json();
   console.log(dataResponse);
+  return dataResponse;
 
   //--- write your code below ---
   //--- write your code above ---
