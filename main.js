@@ -12,12 +12,34 @@ function handleFoodChange() {
 
 async function fetchRecipe(food) {
   const requestUrl = await fetch(
-    `https://api.edamam.com/search?q=kale&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`
+    `https://api.edamam.com/search?q=${food}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`
   );
   const dataResponse = await requestUrl.json();
-  console.log(dataResponse);
-  return dataResponse;
+  const recipes = dataResponse.hits;
+  const firstRecipe = recipes[0].recipe;
+  console.log(firstRecipe);
+  display(firstRecipe);
+  // return dataResponse;
 
   //--- write your code below ---
   //--- write your code above ---
 }
+
+const displayImage = document.getElementById("recipeImg");
+const linkTag = document.getElementById("recipe-label");
+
+function display(firstRecipe) {
+  const label = firstRecipe.label;
+  const recipeImage = firstRecipe.image;
+  const recipeLink = firstRecipe.url;
+
+  displayImage.src = recipeImage;
+  linkTag.href = recipeLink;
+  linkTag.innerText = label;
+}
+
+// Get the name
+// Get the image
+// The actuall recipe
+// Display in the HTML
+// To display multiple images, use a for loop.
