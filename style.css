@@ -10,8 +10,14 @@ body {
   text-align: center;
   color: whitesmoke;
   max-width: 900px;
-  max-height: 100vh;
+  height: 100%;
   margin: auto;
+}
+
+#recipe-section {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 3px solid #f1f1f1;
+  height: 100%;
 }
 
 #recipe-section p {
@@ -38,7 +44,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  height: 400px;
+  height: 450px;
   justify-content: space-evenly;
 }
 .recipesAll {
