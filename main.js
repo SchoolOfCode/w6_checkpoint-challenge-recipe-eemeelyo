@@ -77,7 +77,7 @@ function display(firstRecipe) {
 
 function randomBG() {
   document.body.style.background =
-    "#f3f3f3 url('https://source.unsplash.com/1000x1200/?nature,black') no-repeat center center/cover";
+    "#f3f3f3 url('https://source.unsplash.com/1000x1200/?feast,food') no-repeat center center/cover";
 }
 randomBG();
 

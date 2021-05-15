@@ -19,7 +19,17 @@
       <input
         aria-label="food-input"
         id="food-input"
+        class="foodInput"
         placeholder="What do you fancy eating?"
+        onchange="handleFoodChange()"
+      />
+      <br />
+      <h2 class="or">Or</h2>
+      <input
+        aria-label="food-input"
+        id="food-input2"
+        class="foodInput"
+        placeholder="Foods from a country."
         onchange="handleFoodChange()"
       />
       <br />

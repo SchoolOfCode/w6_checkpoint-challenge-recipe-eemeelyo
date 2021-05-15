@@ -2,42 +2,49 @@
   margin: 0px;
   padding: 0px;
   outline: none;
-  box-sizing: border-box;
 }
 
 body {
   background-color: black;
   text-align: center;
   color: whitesmoke;
-  max-width: 900px;
+  max-width: 958px;
   height: 100%;
   margin: auto;
+  box-sizing: border-box;
 }
 
 #recipe-section {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 3px solid #f1f1f1;
   height: 100%;
+  /* width: 958px; */
 }
 
 #recipe-section p {
-  margin: 30px 0px 50px 0px;
+  margin: 20px 0px 30px 0px;
   font-size: 20px;
 }
 
 .section-heading {
-  margin: 30px;
+  margin: 20px;
   font-size: 70px;
 }
 
-#food-input {
+.foodInput {
   font-size: 20px;
+  background-color: rgb(245, 169, 71);
+  color: white;
+  text-align: center;
 }
-
+.or {
+  margin: 10px 0px 10px 0px;
+}
 #recipe-button {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 20px;
   font-size: 20px;
+  background-color: greenyellow;
 }
 
 .flex-container {
@@ -48,15 +55,16 @@ body {
   justify-content: space-evenly;
 }
 .recipesAll {
-  width: 250px;
+  width: 300px;
   margin: 10px;
 }
 
 .imgAll {
-  width: 250px;
-  height: 100%;
+  width: 300px;
+  height: 90%;
   border: 3px solid white;
-  align-items: stretch;
+  /* align-items: stretch; */
+  box-sizing: border-box;
 }
 
 #recipe-label1 {
@@ -84,10 +92,10 @@ body {
 }
 
 .scroll {
-  font-size: 30px;
+  font-size: 40px;
   color: whitesmoke;
   background-color: black;
-  margin: 20px 0px 20px 0px;
+  /* margin: 10px 0px 10px 0px; */
 }
 
 #left {
