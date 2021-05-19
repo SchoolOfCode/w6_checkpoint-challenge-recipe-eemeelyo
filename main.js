@@ -23,10 +23,11 @@ async function fetchRecipe(food) {
   // console.log(firstRecipe);
   //--- write your code below ---
   //--- write your code above ---
-  display(firstRecipe);
-  display(secondRecipe);
-  display(thirdRecipe);
+  display1(firstRecipe);
+  display2(secondRecipe);
+  display3(thirdRecipe);
   console.log(recipes);
+  console.log(requestUrl);
 }
 
 const displayImage1 = document.getElementById("recipeImg1");
@@ -36,7 +37,7 @@ const linkTag2 = document.getElementById("recipe-label2");
 const displayImage3 = document.getElementById("recipeImg3");
 const linkTag3 = document.getElementById("recipe-label3");
 
-function display(firstRecipe) {
+function display1(firstRecipe) {
   const label = firstRecipe.label;
   const recipeImage1 = firstRecipe.image;
   const recipeLink1 = firstRecipe.url;
@@ -44,7 +45,7 @@ function display(firstRecipe) {
   linkTag1.href = recipeLink1;
   linkTag1.innerText = label;
 }
-function display(secondRecipe) {
+function display2(secondRecipe) {
   const label = secondRecipe.label;
   const recipeImage2 = secondRecipe.image;
   const recipeLink2 = secondRecipe.url;
@@ -52,43 +53,35 @@ function display(secondRecipe) {
   linkTag2.href = recipeLink2;
   linkTag2.innerText = label;
 }
-function display(firstRecipe) {
-  const label = firstRecipe.label;
-  const recipeImage1 = firstRecipe.image;
-  const recipeLink1 = firstRecipe.url;
-  displayImage1.src = recipeImage1;
-  linkTag1.href = recipeLink1;
-  linkTag1.innerText = label;
+function display3(thirdRecipe) {
+  const label = thirdRecipe.label;
+  const recipeImage3 = thirdRecipe.image;
+  const recipeLink3 = thirdRecipe.url;
+  displayImage3.src = recipeImage3;
+  linkTag3.href = recipeLink3;
+  linkTag3.innerText = label;
 }
-
-// async function apiBG() {
-//   const backG = await fetch(
-//     "https://source.unsplash.com/1000x1200/?nature,black"
-//   );
-//   const scenery = await backG.json();
-//   return scenery;
-//   console.log(scenery);
-// }
-
-// function randomBG() {
-//   document.body.style.background = apiBG();
-// }
-// randomBG();
-
+//Fetch random Background image every time the page loads. /////////////////////////////////
 function randomBG() {
   document.body.style.background =
     "#f3f3f3 url('https://source.unsplash.com/1000x1200/?feast,food') no-repeat center center/cover";
 }
 randomBG();
-
-// async function backgroundImage() {
-//   const
-// }
+// Scroll buttons///////////////////////////////////////////////////////////////////////////
 const rightButton = document.getElementById("right");
+const leftButton = document.getElementById("left");
 
 function forwardRecipes() {
-  for (let i = 0; i < recipes.length; i++) {}
+  recipes = dataResponse.hits;
+  firstRecipe = recipes[3].recipe;
+  secondRecipe = recipes[4].recipe;
+  thirdRecipe = recipes[5].recipe;
+  display1(firstRecipe);
+  display2(secondRecipe);
+  display3(thirdRecipe);
 }
+rightButton.addEventListener("click", forwardRecipes);
+leftButton.addEventListener("click", previousRecipes);
 
 // Get the name
 // Get the image

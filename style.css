@@ -12,6 +12,7 @@ body {
   height: 100%;
   margin: auto;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 #recipe-section {
@@ -29,12 +30,13 @@ body {
 .section-heading {
   margin: 20px;
   font-size: 70px;
+  font-family: "Architects Daughter", cursive;
 }
 
 .foodInput {
   font-size: 20px;
   background-color: rgb(245, 169, 71);
-  color: white;
+  color: black;
   text-align: center;
 }
 .or {
@@ -45,6 +47,16 @@ body {
   margin-top: 20px;
   font-size: 20px;
   background-color: greenyellow;
+}
+
+#recipe-button:hover,
+#right:hover,
+#left:hover,
+#recipe-label1:hover,
+#recipe-label2:hover,
+#recipe-label3:hover {
+  background-color: yellow;
+  color: black;
 }
 
 .flex-container {
@@ -73,12 +85,6 @@ body {
   max-width: 500px;
 }
 
-/* #recipeImg1 { */
-/* margin: 20px; */
-/* max-width: fit-content; */
-/* max-height: 270px; */
-/* } */
-
 #recipe-label2 {
   color: whitesmoke;
   font-size: 25px;
@@ -94,8 +100,7 @@ body {
 .scroll {
   font-size: 40px;
   color: whitesmoke;
-  background-color: black;
-  /* margin: 10px 0px 10px 0px; */
+  background-color: rgb(245, 169, 71);
 }
 
 #left {
