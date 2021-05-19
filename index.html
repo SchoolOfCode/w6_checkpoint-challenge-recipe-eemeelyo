@@ -4,19 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fetch</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section id="recipe-section">
       <h2 class="section-heading">Welcome to the Recipe Finder!</h2>
+      <p>
+        A simple project with School Of Code <br />
+        that will help you find a variety of recipe <br />depending on your
+        taste buds.<br /><br />
+        Just type any food or ingredient in the search box <br />and it will do
+        the rest.
+      </p>
       <input
         aria-label="food-input"
         id="food-input"
+        class="foodInput"
+        placeholder="What do you fancy eating?"
         onchange="handleFoodChange()"
       />
+      <br />
+      <br />
       <button id="recipe-button" onclick="handleRecipeClick()">
         Give me a recipe!
       </button>
-      <a id="recipe-label"></a>
+      <br />
+
+      <section id="scrollButton">
+        <button id="left" class="scroll"><</button>
+        <button id="right" class="scroll">></button>
+      </section>
+
+      <section class="flex-container">
+        <section id="recipe1" class="recipesAll">
+          <a id="recipe-label1"></a>
+          <img id="recipeImg1" class="imgAll" src="./img/food3.gif" alt="" />
+        </section>
+
+        <section id="recipe2" class="recipesAll">
+          <a id="recipe-label2"></a>
+          <img id="recipeImg2" class="imgAll" src="./img/food2.gif" alt="" />
+        </section>
+
+        <section id="recipe3" class="recipesAll">
+          <a id="recipe-label3"></a>
+          <img id="recipeImg3" class="imgAll" src="./img/food4.gif" alt="" />
+        </section>
+      </section>
     </section>
     <script src="./main.js"></script>
   </body>
